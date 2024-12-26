@@ -28,4 +28,5 @@ h3 {
     text-align: center;
     margin-top: 20px;
     color: rgba(128, 128, 128, 0.555);
+    user-select: none;
 }
