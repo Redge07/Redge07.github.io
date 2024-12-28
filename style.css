@@ -1,189 +1,60 @@
-:root {
-    --color1: teal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    height: 100vh;
-    overflow: hidden;
-    cursor:crosshair;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    user-select: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    background: rgb(29, 29, 29);
+    color: white;
 }
 
-.bubble {
+.box {
+    display: flex;
+}
+
+#target {
+    margin-left: 10px;
+    position: relative;
+    color: teal;
+}
+
+#target::after {
+    content: '';
     position: absolute;
-    aspect-ratio: 1;
-    background: var(--color1);
-    border-radius: 50%;
-    top: 100%;
-    animation: 4s anim forwards linear;
-    opacity: 0.5;
+    margin-left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 35px;
+    background: teal;
+    animation: anim 0.5s linear infinite;
 }
 
 @keyframes anim {
-    to {
-        top: 0;
-        transform: translateY(-100%);
-        left: var(--nivLeft);
-        filter: hue-rotate(720deg);
+    50% {
+        opacity: 0.1;
     }
 }
 
-.score {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 8rem;
-    text-shadow: 4px 3px 8px var(--color1);
-}
-
-.start {
-    text-transform: uppercase;
-    background: var(--color1);
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
+button {
+    border: solid 2px white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: teal;
     color: white;
     font-size: 2rem;
-    border-radius: 50px;
-    box-shadow: 0 0 10px var(--color1);
-    position: absolute;
-    bottom:30px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-weight: bold;
+    box-shadow: 5px 5px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.start:hover {
+button:hover {
+    box-shadow: none;
+    transform: translateY(4px);
+    color: teal;
     background: white;
-    color: var(--color1);
-    box-shadow: 0 0 10px 5px var(--color1);
-    transform: translateX(-50%) scale(1.1);
-}
-
-.start:active {
-    transform: translateX(-50%) scale(1.5);
-}
-
-.timer {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 3rem;
-    color: red;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 20px;
-    visibility: hidden;
-}
-
-.timer::after {
-    content: 's';
-}
-
-.resultat {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    text-align: center;
-    box-shadow: 0 0 10px 2px;
-    border-radius: 50px;
-    padding: 20px 10px;
-    transition: 0.5s;
-    background: white;
-    width: 90%;
-    max-width: 400px;
-}
-
-.resultat h2 {
-    font-size: 3rem;
-    color: var(--color1);
-}
-
-.resultat h3 {
-    font-size: 2rem;
-    margin: 20px 0;
-}
-
-.resultat h3 span {
-    color: var(--color1);
-}
-
-.resultat button {
-    text-transform: uppercase;
-    font-size: 2rem;
-    background: transparent;
-    border: solid 1px var(--color1);
-    color: var(--color1);
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.resultat button:hover {
-    scale: 1.1;
-}
-
-.chrono {
-    position: absolute;
-    text-align: center;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.chrono::after {
-    content: 'Chrono';
-    position: absolute;
-    left: calc(100% + 10px);
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.chrono i {
-    font-size: 2rem;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.chrono i:hover {
-    scale: 1.1;
-}
-
-.chrono h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-input {
-    outline: none;
-    padding: 10px;
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
-    text-align: center;
-    border-radius: 50%;
-    border: solid 1px var(--color1);
-}
-
-input:focus {
-box-shadow: 0 0 10px var(--color1);
-}
-
-@media screen and (max-width: 600px) {
-    .score {
-        font-size: 4rem;
-        margin-top: 120px;
-    }
+    border: solid 2px teal;
 }
