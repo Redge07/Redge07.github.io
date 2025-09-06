@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.33c2da3a.css",
+    "main.css": "/static/css/main.c69324fb.css",
     "main.js": "/static/js/main.acac35a9.js",
     "static/media/fond.jpg": "/static/media/fond.735a511024b3e16ee6fe.jpg",
+    "static/media/argentina.png": "/static/media/argentina.9c1bcc86c2552806be3b.png",
     "static/media/foot.png": "/static/media/foot.f454b1554c70d60baaaa.png",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
-    "static/media/voyage.jpg": "/static/media/voyage.70186cf5fab25b2f8da1.jpg",
     "static/media/dev.jpg": "/static/media/dev.a92c41b851977e4abd99.jpg",
     "static/media/IndieFlower-Regular.ttf": "/static/media/IndieFlower-Regular.599d26584b9afc1d20b1.ttf",
     "static/media/flower.webp": "/static/media/flower.9d5ec8fb6602a16977d9.webp",
     "index.html": "/index.html",
-    "main.33c2da3a.css.map": "/static/css/main.33c2da3a.css.map",
+    "main.c69324fb.css.map": "/static/css/main.c69324fb.css.map",
     "main.acac35a9.js.map": "/static/js/main.acac35a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.33c2da3a.css",
+    "static/css/main.c69324fb.css",
     "static/js/main.acac35a9.js"
   ]
 }
